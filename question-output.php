@@ -7,7 +7,7 @@
 	# セッションの削除
 	unset($_SESSION['message']);
 
-	if (isset($_REQUEST['question_id'])) {
+	if (!empty($_REQUEST['question_id'])) {
 		# 問題情報の更新
 		updateQuestion($_REQUEST['question_text'], $_REQUEST['description'], $_REQUEST['question_id']);
 
