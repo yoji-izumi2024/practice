@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+.fixed-header nav ul {
+	width: 900px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-header nav ul li {
+    margin: 0 10px;
+}
+
+.fixed-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 5px;
+    display: block;
+}
+
+.fixed-header nav ul li a:hover {
+    background-color: #575757;
+}
+
+footer{
+	background-color: saddlebrown;
+	margin: 20px 0px 0px -10px;
+	padding: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+	max-width: 900px;
+    padding-top: 100px;
+}
+
+.table-container {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+	width: 900px;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul{
+    padding-left:0;
+}
+
+li{
+    list-style:none;
+}
+
+.full-width-input input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user-item {
+    width: 20%;
+}
+.user-input {
+    width: 80%;
+}
+
+.input-item {
+    width: 20%;
+}
+.input-value {
+    width: 80%;
+}
+
+.workbook-id {
+    width: 10%;
+}
+.workbook-title {
+    width: 60%;
+}
+.workbook-percentage {
+    width: 10%;
+}
+.workbook-detail {
+    width: 10%;
+}
+.workbook-delete {
+    width: 10%;
+}
+
+.workbook-question-checkbox {
+    width: 10%;
+}
+.workbook-question-text {
+    width: 90%;
+}
+
+.question-id {
+    width: 10%;
+    min-width: 70px;
+}
+.question-title {
+    width: 70%;
+}
+.question-choice {
+    width: 10%;
+    min-width: 70px;
+}
+.question-delete {
+    width: 10%;
+    min-width: 70px;
+}
+
+.choice-no {
+    width: 10%;
+}
+.choice-text {
+    width: 70%;
+}
+.choice-correct {
+    width: 10%;
+}
+.choice-delete {
+    width: 10%;
+}
+
+.exam-id {
+    width: 10%;
+}
+.exam-title {
+    width: 70%;
+}
+.exam-percentage {
+    width: 10%;
+}
+.exam-start {
+    width: 10%;
+}
+
+.history-exam-id {
+    width: 10%;
+}
+.history-exam-title {
+    width: 50%;
+}
+.history-exam-datetime {
+    width: 20%;
+}
+.history-exam-result {
+    width: 10%;
+}
+.history-exam-detail {
+    width: 10%;
+}
+
+.history-exam-detail-id {
+    width: 10%;
+}
+.history-exam-question {
+    width: 80%;
+}
+.history-exam-detail {
+    width: 10%;
+}

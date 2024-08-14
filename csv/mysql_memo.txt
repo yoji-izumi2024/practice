@@ -1,0 +1,61 @@
+
+
+MySQLで、最終確認として、SQLを実行し、データベースから再作成してみると、以下のエラーが出た。
+
+#HY000Index for table 'db' is corrupt; try to repair it
+
+A5M2ツールのメッセージにも以下の表示があった。
+
+SQL   : drop user if exists 'practice'@'localhost'
+SQL   : #HY000Index for table 'db' is corrupt; try to repair it
+
+
+エラーメッセージをインターネットで確認すると、以下のサイトを見つけた。
+
+https://arakan-pgm-ai.hatenablog.com/entry/2022/02/28/000000
+
+破損しているのが原因のようで、上記サイトにあるコマンドで修復できた。
+
+以下は、その際の破損確認と修復したコマンド履歴です。
+
+
+Setting environment for using XAMPP for Windows.
+frontier-Python@LAPTOP-P590ODBF c:\xampp
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 13
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> check table mysql.db;
++----------+-------+----------+----------------------------------------------------+
+| Table    | Op    | Msg_type | Msg_text                                           |
++----------+-------+----------+----------------------------------------------------+
+| mysql.db | check | warning  | Table is marked as crashed                         |
+| mysql.db | check | warning  | Size of indexfile is: 178569       Expected: 24576 |
+| mysql.db | check | error    | Wrong base information on indexpage at page: 1     |
+| mysql.db | check | error    | Corrupt                                            |
++----------+-------+----------+----------------------------------------------------+
+4 rows in set (0.004 sec)
+
+MariaDB [(none)]> repair table mysql.db;
++----------+--------+----------+----------+f stage done
+| Table    | Op     | Msg_type | Msg_text |
++----------+--------+----------+----------+
+| mysql.db | repair | status   | OK       |
++----------+--------+----------+----------+
+1 row in set (0.032 sec)
+
+MariaDB [(none)]> check table mysql.db;
++----------+-------+----------+----------+tage done
+| Table    | Op    | Msg_type | Msg_text |
++----------+-------+----------+----------+
+| mysql.db | check | status   | OK       |
++----------+-------+----------+----------+
+1 row in set (0.002 sec)
+
+MariaDB [(none)]>
+
