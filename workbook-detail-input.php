@@ -64,10 +64,12 @@
 		<?php foreach ($questions as $question): ?>
 		<tr>
 			<td class="text-center">
-				<input type="checkbox" name="items[]" value="<?php echo $question['question_id']; ?>" <?php echo in_array($question['question_id'], $selectedItems) ? 'checked' : ''; ?>>
+				<input type="checkbox" name="items[]" value="<?php echo $question['question_id']; ?>" id="<?php echo $question['question_id']; ?>" <?php echo in_array($question['question_id'], $selectedItems) ? 'checked' : ''; ?>>
 			</td>
 			<td>
+				<label for="<?php echo $question['question_id']; ?>">
 				<?php echo $question['question_text']; ?>
+				</label>
 			</td>
 		</tr>
 		<?php endforeach; ?>

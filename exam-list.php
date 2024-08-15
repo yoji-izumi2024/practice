@@ -48,7 +48,6 @@
 
 		echo '</tbody>';
 		echo '</table>';
-		echo '<hr>';
 
 	} else {
 		echo '受験するには、ログインしてください。';
