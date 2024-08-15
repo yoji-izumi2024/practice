@@ -47,9 +47,9 @@
 		
 				echo '<tr>';
 				echo '<td class="text-center">', $answer_id, '</td>';
-				echo '<td>', $answer['workbook_title'], '</a></td>';
-				echo '<td class="text-center">', $answer['exam_date'], '</a></td>';
-				echo '<td class="text-center">', $answer['exam_results'], '</a></td>';
+				echo '<td>', $answer['workbook_title'], '</td>';
+				echo '<td class="text-center">', $answer['exam_date'], '</td>';
+				echo '<td class="text-center">', $answer['exam_results'], '</td>';
 				echo '<td class="text-center"><a href="history-detail.php?answer_id=', $answer_id, '" class="mx-2">詳細</a></td>';
 				echo '</tr>';
 			}

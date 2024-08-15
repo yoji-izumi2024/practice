@@ -59,12 +59,12 @@
 
 			echo '<tr>';
 			echo '<td class="text-center align-middle" rowspan="2">', $no++, '</td>';
-			echo '<td>', $question_text, '</a></td>';
-			echo '<td class="text-center align-middle" rowspan="2">', $answer_correct, '</a></td>';
+			echo '<td>', $question_text, '</td>';
+			echo '<td class="text-center align-middle" rowspan="2">', $answer_correct, '</td>';
 			echo '</tr>';
 
 			echo '<tr>';
-			echo '<td>', $description, '</a></td>';
+			echo '<td>', $description, '</td>';
 			echo '</tr>';		
 		}
 	
