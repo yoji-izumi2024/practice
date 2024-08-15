@@ -82,5 +82,5 @@ CREATE TABLE answer_detail (
     answer_id INT,                      # 解答番号
     question_text VARCHAR(255),         # 問題文
     description TEXT,                   # 解説
-    answer VARCHAR(1)                   # 解答 '0':未選択、'1':選択
+    answer VARCHAR(1)                   # 解答 '0':不正解、'1':正解
 );

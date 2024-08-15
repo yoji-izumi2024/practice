@@ -84,20 +84,22 @@
             echo "<h6>問題", $current_page, ". " . $question_text . "</h6><br>";
 
             if (count($question['choices']) > 0) {
-                echo '<ul>';
+                echo '<div class="grid-container">';
+                echo '<div class="subgrid-container">';
                 foreach ($question['choices'] as $choice) {
 
                     $choice_text = nl2br(htmlspecialchars($choice['choice_text'], ENT_QUOTES, 'UTF-8'), false);
 
-                    echo '<li>';
-                    echo '<label class="m-1">';
-                    echo '<input type="checkbox" name="answers[]" value="', $choice['choice_id'], '" class="mx-2"';
+                    echo '<div class="grid-item">';
+                    echo '<input type="checkbox" name="answers[]" value="', $choice['choice_id'], '" ';
+                    echo 'id="', $choice['choice_id'], '" ';
                     echo in_array($choice['choice_id'], $_SESSION['selected']) ? 'checked' : '', '>';
-                    echo $choice_text, '<br>';
-                    echo '</label>';
-                    echo '</li>';
+                    echo '</div>';
+
+                    echo '<div class="grid-item"><label for="', $choice['choice_id'], '">', $choice_text, '</label></div>';
                 }
-                echo '</ul>';
+                echo '</div>';
+                echo '</div>';
 
             } else {
                 echo '<p class="ms-2">選択肢が未登録です</p>';
@@ -106,9 +108,9 @@
 
         echo '<input type="hidden" name="page" value="', $current_page + 1, '">';
         if ($current_page < $total_pages) {
-            echo '<input type="submit" value="次へ">';
+            echo '<input type="submit" value="次へ" class="mt-2">';
         } else {
-            echo '<input type="submit" value="採点結果">';
+            echo '<input type="submit" value="採点結果" class="mt-2">';
         }
         echo '</form>';
 

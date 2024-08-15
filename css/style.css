@@ -190,3 +190,17 @@ li{
 .history-exam-detail {
     width: 10%;
 }
+
+.grid-container {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 20px auto;
+}
+
+.subgrid-container {
+    display: contents;
+}
+
+.grid-item {
+    padding: 2px;
+}
